@@ -1,1 +1,23 @@
 /** Write your CSS in here **/
+#content{
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+
+    background-color: blue;
+}
+#allquote{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    color: black;
+    font-size: 1.2rem;
+}#btn{
+    position: relative;
+    width: 100px;
+    height: 40px;
+top: 60px;
+    right:  -15=0px;
+    color: wheat;
+    background-color: rgb(59, 7, 49);
+}
