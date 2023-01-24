@@ -1,23 +1,28 @@
-// Write your code here
-let allImages = document.getElementById("allimg");
+//let slideshow = document.getElementById("slideshow");
 let btn = document.querySelector("#btn1");
 let btn2 = document.querySelector("#btn2");
-let arrayOfImg = ["images/image1.jpg", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg"]
- let imgIndex = 1;
- let imgIndex2 = 2;
- function displayImage(){
-btn.addEventListener("click", ()=>{
-allImages.setAttribute('src', arrayOfImg[imgIndex]);
-imgIndex++;
-if(imgIndex > 3){
-    imgIndex = 1;
-}})
-btn2.addEventListener("click", ()=>{
-    allImages.setAttribute('src', arrayOfImg[imgIndex2]);
-    imgIndex2--;
-    if(imgIndex2 > 1){
-        imgIndex2 = 2;
+
+// Write your code here
+let allImages = document.getElementById("allimg1");
+let arrayOfImg = ["images/image1.png", "images/image2.jpg", "images/image3.jpg", "images/image4.jpg"]
+let imgIndex = 0;
+let imgIndex2 = 0;
+function displayImage() {
+    btn.addEventListener("click", () => {
+        allImages.src = arrayOfImg[imgIndex++];
+        if (imgIndex > arrayOfImg.length - 1) {
+            imgIndex = 0;
+        }
+    })
+} displayImage();
+
+function displayImageBack() {
+
+    btn2.addEventListener("click", () => {
+        allImages.src = arrayOfImg[imgIndex2--];
+        if (imgIndex2 < arrayOfImg.length - arrayOfImg.length) {
+            imgIndex2 = arrayOfImg.length - 1;
+        }
+    })
 }
-})
-}
- displayImage();
+displayImageBack();
